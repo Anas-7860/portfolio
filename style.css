@@ -26,6 +26,9 @@ body {
     background-size: 400% ;
     animation: navborder 30s alternate infinite;
 }
+.menu-hide{
+    display: none;
+}
 @media screen and (min-width: 1700px){
     .menu-hide{
         opacity: 0;
