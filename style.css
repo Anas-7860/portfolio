@@ -28,8 +28,7 @@ body {
 }
 @media screen and (min-width: 1700px){
     .menu-hide{
-        opacity: 0;
-        max-height: 0;
+       visibility: hidden;
     }
 }
 /* .menu-icon{
