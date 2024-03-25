@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100vw;
+    position: fixed;
+    float: right;
+    background-color: black;
+    z-index: 5;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    justify-content: center;
+}
+.glow-anim{
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(45deg,red,blue,red,orange,skyblue,blue,green,lightgreen,pink,magenta);
+    background-size: 400% ;
+    animation: navborder 30s alternate infinite;
+}
+@media screen and (min-width: 1700px){
+    .menu-hide{
+        opacity: 0;
+        max-height: 0;
+    }
+}
+/* .menu-icon{
+    animation-name: rotate;
+    animation-duration: 1s;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+} */
+@media screen and (max-width: 900px){
+   
+    .menu-hide a{
+        width: 100vw;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        text-decoration: none;
+    }
+    .menu-hide{
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease;
+    }
+  
+}
+@keyframes navborder {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    75%{
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 400%;
+    }
+  }
+#nav {
+    height: 7vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo{
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(172, 167, 167);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-large;
+  }
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+.menu a:hover{
+    animation-fill-mode: linear;
+    color: rgb(221, 123, 123);
+    transition-duration: 0.6s;
+}
+.menu-icon {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .menu a {
+        display: none; /* Hide navigation links */
+    }
+    .menu-icon {
+        display: block; /* Display menu icon */
+    }
+    .content-1 p{
+        font-size: 5px;
+    }
+    .contact-info{
+        align-self:last baseline;
+        margin-bottom: 270px;
+    }
+}
+
+/* nav is complete */
+
+/* hero section */
+.content-1{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    background-color: #000000;
+    /* background-image: url("dark mountaun.jpg");
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 221, 221);
+    overflow-y: hidden;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius:0 0 20% 20% ;
+    transition: opacity 1s linear;
+}
+.content-1 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+} 
+.contact-info {
+    height: 4.5rem;
+    width: 20rem;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+.contact-info a{
+    height: 50px;
+    width:50px;
+    background-color:black ;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+.contact-info a:hover{
+    height: 55px;
+    width: 55px;
+    animation-name: rotor;
+    animation-duration: 2s;
+}
+@keyframes rotor {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* hero2 */
+
+.hero-2{
+color: white;
+height: 110vh;
+background: rgb(255, 255, 255);
+background-image: url('white bg.jpg');
+background-size: cover;
+width: 97%;
+margin-left: 38px;
+border-radius: 25px;
+}
+ .hero-2 h1{
+    margin: 40px 84px
+ }
+
+.my-image{
+    height: 450px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+
+    border-radius: 50%;
+    border: 7px double white;
+    background-image: url("myimage.jpeg");
+    background-size: cover;
+}
+.about-info{
+    height: 580px;
+    width: 900px;
+    margin-top: 100px;
+    background-color: rgb(14, 13, 13);
+    margin-left: 100px;
+    border-radius: 15px;
+    border: 1px solid rgb(25, 25, 25);
+    box-shadow: 5px 5px 20px rgb(39, 38, 38);
+    font-family: inherit;
+    font-size: 23px;
+    color: rgb(190, 189, 189);
+    justify-content: center;
+    z-index: 1;
+}
+.about-info p{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.btncontain{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width:480px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.btn{
+    height: 50px;
+    width: 210px;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration:none ;
+}
+.btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition-duration: 0.3s;
+    font-size: 1.3rem;
+    
+}
+@media screen and (max-width: 1200px){
+    .about-info{
+        font-size:21px;
+        margin-left: 50px ;
+    }
+}
+@media screen and (max-width: 900px){
+    .hero-2{
+        height: 1700px;
+        display: grid;
+        margin-left :20px;
+        justify-content: center;
+    }
+    .my-image{
+        margin: 0 0;
+        height: 380px;
+        width: 380px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .about-info{
+        margin: 0 0;
+        font-size: 20px;
+        height: 830px;
+        width: 380px;
+    }
+    .btncontain{
+        height: 45px;
+        width: 300px;
+        margin-left:30px;
+    }
+    .btn{
+        height: 45px;
+        width: 130px ;
+        font-size: 1rem;
+    }
+}
+/* hero 2 done */
+.skillsec{
+width: 100vw;
+height: 160vh;
+display: flex;
+justify-content: center;
+}
+.hero-3{
+background: rgb(23, 21, 21);
+width: 96%;
+margin-top: 40px;
+border-radius: 30px;
+height: 150vh;
+}
+.hero-3 h1{
+    margin: 40px 84px
+ }
+ .skilllist{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+ }
+ .skillbox{
+    margin: 2rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: white;
+ }
+ @media screen and (max-width:1200px){
+    .skillbox{
+        margin: 1rem;
+        height: 100px;
+        width: 100px;
+    }
+    .hero-3{
+        height: 500px;
+        margin-left: 20px;
+    }
+    .skillsec{
+        height: 600px;
+    }
+ }
+ @media screen and (max-width:500px){
+    .hero-3{
+        height: 950px;
+    }
+    .skillsec{
+        height: 1050px;
+    }
+ }
+/*hero 3 end  */
+
+.hero-4{
+    height: 70vh;
+    width: 97%;
+    margin-left: 35px;
+    background-image: url('hero-4.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.hero-4 p{
+    position: absolute;
+    margin-bottom: 20rem;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.cc{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.contact-content-1{
+    height: 100px;
+    display: grid;
+    width: 300px;
+   
+    margin-right: 30px;
+}
+.contact-content-2{
+    height: 100px;
+    width: 300px;
+    display: grid;
+    justify-content: center;
+  
+    margin-right: 30px;
+}
+.contact-content-3{
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    width: 300px;
+
+}
+.con-item{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+.cc>a:hover{
+  filter: invert(100%);
+  transition-duration: 0.3s;
+}
+@media screen and (max-width:500px){
+    .hero-4{
+        display: grid;
+        height: 100vh;
+        margin-left: 20px;
+      
+    }
+    .hero-4 p{
+        align-self: baseline;
+        margin-left: 80px;
+    }
+    .contact-content-1{
+        margin-top:80px
+    }
+}
+
+footer{
+    margin-top: 30px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    color: white;
+}
